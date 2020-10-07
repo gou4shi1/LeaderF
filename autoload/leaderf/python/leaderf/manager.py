@@ -576,7 +576,7 @@ class Manager(object):
                     return
 
                 if buffer_len >= maxheight: # scrollbar appear
-                    maxwidth -= 1
+                    maxwidth -= 2
 
                 pos = "botleft"
                 line = maxheight + 1
@@ -605,9 +605,7 @@ class Manager(object):
                     "pos":             pos,
                     "line":            line,
                     "col":             col,
-                    "padding":         [0, 0, 0, 0],
-                    "border":          [1, 0, 0, 0],
-                    "borderchars":     [' '],
+                    "border":          [1, 0, 0, 1],
                     "borderhighlight": ["Lf_hl_previewTitle"],
                     "filter":          "leaderf#popupModePreviewFilter",
                     }

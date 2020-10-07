@@ -540,7 +540,7 @@ class LfInstance(object):
                     "pos":             "topleft",
                     "line":            line + 1,      # there is an input window above
                     "col":             col,
-                    "padding":         [0, 0, 0, 0],
+                    "border":          [0, 1, 0, 1],
                     "scrollbar":       0,
                     "mapping":         0,
                     "filter":          "leaderf#PopupFilter",
@@ -582,8 +582,9 @@ class LfInstance(object):
                     "maxheight":       1,
                     "zindex":          20480,
                     "pos":             "topleft",
-                    "line":            line,
+                    "line":            line - 1,
                     "col":             col,
+                    "border":          [1, 1, 0, 1],
                     "scrollbar":       0,
                     "mapping":         0,
                     }
@@ -623,6 +624,7 @@ class LfInstance(object):
                         "pos":             "topleft",
                         "line":            line + 1 + self._window_object.height,
                         "col":             col,
+                        "border":          [0, 1, 1, 1],
                         "scrollbar":       0,
                         "mapping":         0,
                         }
