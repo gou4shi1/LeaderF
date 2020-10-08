@@ -936,7 +936,7 @@ class Manager(object):
                 lfCmd("redraw")
                 lfCmd("noautocmd call win_gotoid(%s)" % cur_winid)
             else:
-                lfCmd("call win_execute(%d, 'norm! k')" % (self._preview_winid))
+                lfCmd("call win_execute(%d, 'norm! 10k')" % (self._preview_winid))
 
     def _toDownInPopup(self):
         if self._preview_winid > 0 and int(lfEval("winbufnr(%d)" % self._preview_winid)) != -1:
@@ -947,7 +947,7 @@ class Manager(object):
                 lfCmd("redraw")
                 lfCmd("noautocmd call win_gotoid(%s)" % cur_winid)
             else:
-                lfCmd("call win_execute(%d, 'norm! j')" % (self._preview_winid))
+                lfCmd("call win_execute(%d, 'norm! 10j')" % (self._preview_winid))
 
     def _toUp(self):
         if self._getInstance().getWinPos() == 'popup':
